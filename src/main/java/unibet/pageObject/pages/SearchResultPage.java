@@ -11,6 +11,7 @@ import java.util.List;
 
 import static java.time.Duration.ofSeconds;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static unibet.Utils.pause;
 
 public class SearchResultPage extends BasePage {
@@ -21,6 +22,8 @@ public class SearchResultPage extends BasePage {
     // Elements
     @FindBy(xpath = "//*[contains(@class, '_3Hr3qONzU09D2EpcszWrzd')]")
     private MobileElement searchInput;
+    @FindBy(xpath = "//h1[@class='_3j1YMd3zjL1xNt87XF8hqO']")
+    private MobileElement noResultsNotice;
 
     public SearchResultPage(AppiumDriver driver) {
         super(driver);
@@ -36,6 +39,11 @@ public class SearchResultPage extends BasePage {
                 results.size(), expNum,
                 "Wrong number of search results"
         );
+    }
+
+    public void assertNoResultsDisplayed() {
+        pause(ofSeconds(2));
+        assertTrue(noResultsNotice.isDisplayed());
     }
 
     public SearchResultPage assertValueOfSearchField(String expected) {

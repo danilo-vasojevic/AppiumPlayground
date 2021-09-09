@@ -17,5 +17,12 @@ public class SearchFeatureTest extends Runner {
                 .assertValueOfSearchField("football");
     }
 
-
+    @Test
+    @DisplayName("No search Results for search term")
+    public void testMethod() {
+        String searchCriteria = "123123";
+        getSearchResultPage(searchCriteria)
+                .assertValueOfSearchField(searchCriteria)
+                .assertNoResultsDisplayed();
+    }
 }

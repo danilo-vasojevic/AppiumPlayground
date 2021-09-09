@@ -43,8 +43,8 @@ public class Runner {
         return homePage;
     }
 
-    public SearchResultPage getSearchResultPage() {
-        getAppiumDriver().get(config.baseUrl() + "/search");
+    public SearchResultPage getSearchResultPage(String searchCriteria) {
+        getAppiumDriver().get(config.baseUrl() + "/search/" + searchCriteria);
         return searchResultPage;
     }
 }
