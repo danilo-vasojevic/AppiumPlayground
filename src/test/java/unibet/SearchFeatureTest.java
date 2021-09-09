@@ -12,7 +12,7 @@ public class SearchFeatureTest extends Runner {
     void simpleTest() {
         getHomePage()
                 .closeWelcomeModal()
-                // Accept cookies
+                .acceptCookies()
                 .performSearch("football")
                 .assertValueOfSearchField("football");
     }
