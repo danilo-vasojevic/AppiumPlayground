@@ -14,6 +14,7 @@ public class SearchFeatureTest extends Runner {
                 .closeWelcomeModal()
                 .acceptCookies()
                 .performSearch("football")
+                // Goes to SearchResultsPage
                 .assertValueOfSearchField("football");
     }
 
