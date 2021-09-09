@@ -17,8 +17,10 @@ import static io.appium.java_client.remote.MobileCapabilityType.PLATFORM_VERSION
 
 public class DriverFactory {
 
-    @Getter static final Configuration config = ConfigFactory.create(Configuration.class);
-    @Getter static AppiumDriver driver;
+    @Getter
+    static final Configuration config = ConfigFactory.create(Configuration.class);
+    @Getter
+    static AppiumDriver driver;
 
 
     private static DesiredCapabilities getCapabilities() {
@@ -32,7 +34,7 @@ public class DriverFactory {
     }
 
     public static AppiumDriver getAppiumDriver() {
-        if(driver != null) return driver;
+        if (driver != null) return driver;
 
         String appiumServerURL = String.format("http://%s:%s/wd/hub", config.hostname(), config.port());
         try {

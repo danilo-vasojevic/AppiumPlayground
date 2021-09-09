@@ -1,7 +1,5 @@
 package unibet;
 
-import io.appium.java_client.AppiumDriver;
-import lombok.Getter;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -9,7 +7,9 @@ import org.junit.jupiter.api.BeforeEach;
 import unibet.pageObject.pages.HomePage;
 import unibet.pageObject.pages.SearchResultPage;
 
-import static unibet.DriverFactory.*;
+import static unibet.DriverFactory.config;
+import static unibet.DriverFactory.getAppiumDriver;
+import static unibet.DriverFactory.getConfig;
 
 
 public class Runner {

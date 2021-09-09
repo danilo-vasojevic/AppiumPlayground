@@ -6,7 +6,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import unibet.pageObject.components.base.BaseComponent;
 
-import static java.time.Duration.ofMillis;
 import static java.time.Duration.ofSeconds;
 import static unibet.Utils.pause;
 

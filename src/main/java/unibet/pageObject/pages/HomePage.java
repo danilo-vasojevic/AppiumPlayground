@@ -3,7 +3,6 @@ package unibet.pageObject.pages;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import unibet.pageObject.components.MainMenu;
 import unibet.pageObject.components.WelcomeBonusModal;

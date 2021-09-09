@@ -2,7 +2,6 @@ package unibet.pageObject.pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.support.FindBy;
 import unibet.pageObject.components.MainMenu;
 import unibet.pageObject.pages.base.BasePage;
@@ -11,7 +10,7 @@ import javax.naming.directory.SearchResult;
 import java.util.List;
 
 import static java.time.Duration.ofSeconds;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static unibet.Utils.pause;
 
 public class SearchResultPage extends BasePage {

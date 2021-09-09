@@ -4,7 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
-import static java.time.Duration.*;
+import static java.time.Duration.ofSeconds;
 
 public class BasePage {
     protected AppiumDriver driver;
